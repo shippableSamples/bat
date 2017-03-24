@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+services:
+  - selenium
+
+script:
+  - ls /build/IN/sampleapp-deploy/deploy
+  - cat /build/IN/sampleapp-deploy/deploy/cluster.json
+  - cat /build/IN/sampleapp-deploy/deploy/loadBalancers.json
+  - cat /build/IN/sampleapp-deploy/deploy/manifests.json
+  - cat /build/IN/sampleapp-deploy/deploy/sampleapp-man/ddc-container-definition.json
+  - cat /build/IN/sampleapp-deploy/deploy/sampleapp-man/ddc-response.json
+
+  - sudo npm install
+  - export DISPLAY=:99.0
+  - xvfb-run --server-args="-ac" npm test
