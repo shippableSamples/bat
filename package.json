@@ -1,0 +1,19 @@
+{
+  "name": "sample_node_selenium",
+  "author": "shippable",
+  "version": "0.0.0",
+  "keywords": [],
+  "homepage": "https://github.com/9ok3r/bat",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/9ok3r/bat"
+  },
+  "description": "",
+  "contributors": [],
+  "dependencies": {
+    "nightwatch": "~0.5.10"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/nightwatch"
+  }
+}
